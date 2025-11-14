@@ -1,7 +1,17 @@
 const express = require('express');
 const { Pool } = require('pg');
 
+// const getUsers = (request, response) => {
+//   pool.query('SELECT * FROM users ORDER BY id ASC', (error, results) => {
+//     if (error) {
+//       throw error
+//     }
+//     response.status(200).json(results.rows)
+//   })
+// }
+
 const app = express();
+app.use(express.json());
 require('dotenv').config();
 const pool = new Pool({
   user: process.env.DB_USER,
@@ -18,6 +28,21 @@ app.get('/logs', async (req, res) => {
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
+});
+
+app.post('/users', async (req, res) => {
+  const { id, name } = req.body;
+
+  if (!id || !name) {
+    return res.status(400).send('Missing id or name in request body');
+  }
+
+  pool.query('INSERT INTO users (id, name) VALUES ($1, $2)', [id, name], (error, results) => {
+    if (error) {
+      return res.status(500).send(`Error: ${error.message}`);
+    }
+    res.status(201).send(`User added with ID: ${id}`);
+  });
 });
 
 app.listen(3000, () => {

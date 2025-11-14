@@ -7,6 +7,63 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div>
+        <h2 class="title">Log Yönetim Sistemi</h2>
+        <p class="desc">Sistem değişikliklerini izleyin ve analiz edin</p>
+    </div>
+    <div class="interact-menu">
+        <input type="text" placeholder="Kullanıcı, kolon veya işlemi yapan kişi ara..." class="search-input">
+        <select name="filter" class="filter-combo">
+            <option value="ALL" selected>Tüm İşlemler</option>
+            <option value="UPDATE">Güncellemeler</option>
+            <option value="DELETE">Silme İşlemleri</option>
+            <option value="CREATE">Oluşturma</option>
+        </select>
+        <div class="interact-widgets">
+            <div class="widget-menu">
+                <div class="widget-title-area">
+                    <p class="widget-title">Toplam Log</p>
+                    <svg class="widget-icon" data-widgettype="logs" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 12H7L9 19L12 5L15 17L17 12H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>           
+                </div>
+                <p class="widget-value" id="logs-value">0</p>  
+            </div>
+            <div class="widget-menu">
+                <div class="widget-title-area">
+                    <p class="widget-title">Aktif Kullanıcı</p>
+                    <svg class="widget-icon" data-widgettype="page" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 21C5 17.134 8.13401 14 12 14C15.866 14 19 17.134 19 21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>         
+                </div>
+                <p class="widget-value" id="active-users-value">0</p>  
+            </div>
+            <div class="widget-menu">
+                <div class="widget-title-area">
+                    <p class="widget-title">Entity Tipi</p>
+                    <svg class="widget-icon" data-widgettype="database" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 18V6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M20 6V18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M12 10C16.4183 10 20 8.20914 20 6C20 3.79086 16.4183 2 12 2C7.58172 2 4 3.79086 4 6C4 8.20914 7.58172 10 12 10Z" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M20 12C20 14.2091 16.4183 16 12 16C7.58172 16 4 14.2091 4 12" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M20 18C20 20.2091 16.4183 22 12 22C7.58172 22 4 20.2091 4 18" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                </div>
+                <p class="widget-value" id="entity-value">0</p> 
+            </div> 
+        </div>
+    </div>
+    <div class="data-area">
+        <div class="data-element">
+            <svg class="data-open-element" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z" fill="currentColor"/>
+            </svg>
+            <p class="data-type" data-type="UPDATE">UPDATE</p>
+            <p class="data-name">users</p>
+            <p class="data-space">•</p>
+            <p class="data-id">ID: 123</p>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
