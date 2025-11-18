@@ -148,10 +148,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 12px;
+  gap: 10px;
 }
 
 .data-element {
+  cursor: pointer;
   background-color: #1e293b;
   padding: 16px;
   display: flex;
@@ -168,13 +169,19 @@ body {
   gap: 12px;
 }
 
-.data-open-element {
+.data-interact-icon {
+  display: block;
   color: rgba(255, 255, 255, 0.68);
   width: 20px;
   height: 20px;
+  transition: transform 0.15s ease-in-out;
 }
 
-.data-open-element:hover {
+.status-open {
+  transform: rotate(90deg);
+}
+
+.data-interact-icon:hover {
   color: white;
   cursor: pointer;
 }
@@ -274,4 +281,72 @@ body {
   height: 12px;
   margin: auto 0;
   color: #94a3b8;
+}
+
+.accordion-data {
+  display: none;
+  flex-direction: column;
+  font-size: 10px;
+  color: #94a3b8;
+  border-top: 2px solid #334155;
+  padding-top: 12px;
+  gap: 12px;
+}
+
+.changed-value {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.old-data-value {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  color: rgb(201, 60, 60);
+  border: 1px solid #334155;
+}
+
+.new-data-value {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  color: rgb(34, 197, 94);
+  border: 1px solid #334155;
+}
+
+.new-data-desc {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  color: white;
+  border: 1px solid #334155;
+}
+
+.transaction-details {
+  display: flex;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #334155;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.transaction-title {
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.transaction-details > p {
+  line-height: 0px;
+}
+
+.transaction-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.transaction-data {
+  color: white;
 }

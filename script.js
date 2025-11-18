@@ -1,50 +1,30 @@
-const express = require('express');
-const { Pool } = require('pg');
-
-// const getUsers = (request, response) => {
-//   pool.query('SELECT * FROM users ORDER BY id ASC', (error, results) => {
-//     if (error) {
-//       throw error
-//     }
-//     response.status(200).json(results.rows)
-//   })
-// }
-
-const app = express();
-app.use(express.json());
-require('dotenv').config();
-const pool = new Pool({
-  user: process.env.DB_USER,
-  host: process.env.DB_HOST,
-  database: process.env.DB_NAME,
-  password: process.env.DB_PASSWORD,
-  port: process.env.DB_PORT,
-});
-
-app.get('/logs', async (req, res) => {
-  try {
-    const result = await pool.query('SELECT * FROM logs');
-    res.json(result.rows);
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
-});
-
-app.post('/users', async (req, res) => {
-  const { id, name } = req.body;
-
-  if (!id || !name) {
-    return res.status(400).send('Missing id or name in request body');
-  }
-
-  pool.query('INSERT INTO users (id, name) VALUES ($1, $2)', [id, name], (error, results) => {
-    if (error) {
-      return res.status(500).send(`Error: ${error.message}`);
-    }
-    res.status(201).send(`User added with ID: ${id}`);
+fetch("http://localhost:3000/logs")
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data);
   });
-});
+let comboFilter = document.getElementsByClassName("filter-combo")[0];
+console.log(comboFilter.value);
+var acc = document.getElementsByClassName("data-element");
 
-app.listen(3000, () => {
-  console.log('Server running on port 3000');
-});
+for (var i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function () {
+    var accardionData = this.querySelector(".accordion-data");
+    var openIcon = this.querySelector(".data-interact-icon");
+
+    if (accardionData.style.display === "flex") {
+      accardionData.style.display = "none";
+      openIcon.classList.remove("status-open");
+    } else {
+      openIcon.classList.add("status-open");
+      accardionData.style.display = "flex";
+    }
+  });
+}
+
+// const logsContainer = document.getElementById("logs");
+//   data.forEach((log) => {
+//     const logEntry = document.createElement("div");
+//     logEntry.textContent = `[${log.timestamp}] ${log.message}`;
+//     logsContainer.appendChild(logEntry);
+//   });

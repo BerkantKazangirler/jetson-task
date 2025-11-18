@@ -13,7 +13,7 @@
     </div>
     <div class="interact-menu">
         <input type="text" placeholder="Kullanıcı, kolon veya işlemi yapan kişi ara..." class="search-input">
-        <select name="filter" class="filter-combo">
+        <select name="filter" class="filter-combo" onchange="console.log(this.value)">
             <option value="ALL" selected>Tüm İşlemler</option>
             <option value="UPDATE">Güncellemeler</option>
             <option value="DELETE">Silme İşlemleri</option>
@@ -56,7 +56,7 @@
     <div class="data-area">
         <div class="data-element">
             <div class="data-header">
-                <svg class="data-open-element" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <svg class="data-interact-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z" fill="currentColor"/>
                 </svg>
                 <span class="data-type" data-type="CREATE">CREATE</span>
@@ -82,10 +82,58 @@
                     <p>admin</p>
                 </div>
             </div>
+            <div class="accordion-data">
+                <div class="changed-value">
+                    <span>Eski Değer</span>
+                    <span class="old-data-value">Test</span>
+                </div>
+                <div class="changed-value">
+                    <span>Yeni Değer</span>
+                    <span class="new-data-value">Test</span>
+                </div>
+                <div class="changed-value">
+                    <span>Değişiklik Sebebi</span>
+                    <span class="new-data-desc">Kullanıcı adı güncelleme talebi</span>
+                </div>
+                <div class="transaction-details">
+                    <p class="transaction-title">İşlem Detayları</p>
+                    <div class="transaction-row">
+                        <span>Request ID:</span>
+                        <span class="transaction-data">REQ-2024-001</span>
+                    </div>
+                    <div class="transaction-row">
+                        <span>IP Adresi:</span>
+                        <span class="transaction-data">192.168.1.100</span>
+                    </div>
+                    <div class="transaction-row">
+                        <span>Değiştiren ID:</span>
+                        <span class="transaction-data">1</span>
+                    </div>
+                    <div class="transaction-row">
+                        <span>Değiştiren:</span>
+                        <span class="transaction-data">admin</span>
+                    </div>
+                </div>
+                <div class="transaction-details">
+                    <p class="transaction-title">Entity Bilgisi</p>
+                    <div class="transaction-row">
+                        <span>Tür:</span>
+                        <span class="transaction-data">user</span>
+                    </div>
+                    <div class="transaction-row">
+                        <span>Entity ID:</span>
+                        <span class="transaction-data">123</span>
+                    </div>
+                    <div class="transaction-row">
+                        <span>Kolon:</span>
+                        <span class="transaction-data">name</span>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="data-element">
             <div class="data-header">
-                <svg class="data-open-element" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <svg class="data-interact-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z" fill="currentColor"/>
                 </svg>
                 <span class="data-type" data-type="UPDATE">UPDATE</span>
@@ -111,10 +159,16 @@
                     <p>admin</p>
                 </div>
             </div>
+            <div class="accordion-data">
+                <span class="old-data">Eski Değer</span>
+                <span class="old-data-value">Test</span>
+                <span class="new-data">Yeni Değer</span>
+                <span class="new-data-value">Test</span>
+            </div>
         </div>
         <div class="data-element">
             <div class="data-header">
-                <svg class="data-open-element" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <svg class="data-interact-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z" fill="currentColor"/>
                 </svg>
                 <span class="data-type" data-type="DELETE">DELETE</span>
@@ -139,6 +193,12 @@
                     </svg>    
                     <p>admin</p>
                 </div>
+            </div>
+            <div class="accordion-data">
+                <span class="old-data">Eski Değer</span>
+                <span class="old-data-value">Test</span>
+                <span class="new-data">Yeni Değer</span>
+                <span class="new-data-value">Test</span>
             </div>
         </div>
     </div>
