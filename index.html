@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -55,13 +55,91 @@
     </div>
     <div class="data-area">
         <div class="data-element">
-            <svg class="data-open-element" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z" fill="currentColor"/>
-            </svg>
-            <p class="data-type" data-type="UPDATE">UPDATE</p>
-            <p class="data-name">users</p>
-            <p class="data-space">•</p>
-            <p class="data-id">ID: 123</p>
+            <div class="data-header">
+                <svg class="data-open-element" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z" fill="currentColor"/>
+                </svg>
+                <span class="data-type" data-type="CREATE">CREATE</span>
+                <span class="data-name">users</span>
+                <span class="data-space">•</span>
+                <span class="data-id">ID: 123</span>
+            </div>
+            <div class="data-details">
+                <span class="data-user">Kullanıcı: <span class="data-user-name">admin</span></span>
+                <span class="data-separator">→</span>
+                <span class="data-colmn">Kolon: <span class="data-colmn-name">name</span></span>
+            </div>
+            <div class="data-footer">
+                <div class="footer-timestamp">
+                    <svg class="footer-icon" fill="currentColor" width="800px" height="800px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3,22H21a1,1,0,0,0,1-1V6a1,1,0,0,0-1-1H17V3a1,1,0,0,0-2,0V5H9V3A1,1,0,0,0,7,3V5H3A1,1,0,0,0,2,6V21A1,1,0,0,0,3,22ZM4,7H20v3H4Zm0,5H20v8H4Z"/></svg>
+                    <p class="data-date">2024-11-14</p>
+                    <p class="data-time">08:45:10</p>
+                </div>
+                <div class="data-madeby">
+                    <svg class="madeby-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 21C5 17.134 8.13401 14 12 14C15.866 14 19 17.134 19 21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>    
+                    <p>admin</p>
+                </div>
+            </div>
+        </div>
+        <div class="data-element">
+            <div class="data-header">
+                <svg class="data-open-element" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z" fill="currentColor"/>
+                </svg>
+                <span class="data-type" data-type="UPDATE">UPDATE</span>
+                <span class="data-name">users</span>
+                <span class="data-space">•</span>
+                <span class="data-id">ID: 123</span>
+            </div>
+            <div class="data-details">
+                <span class="data-user">Kullanıcı: <span class="data-user-name">admin</span></span>
+                <span class="data-separator">→</span>
+                <span class="data-colmn">Kolon: <span class="data-colmn-name">name</span></span>
+            </div>
+            <div class="data-footer">
+                <div class="footer-timestamp">
+                    <svg class="footer-icon" fill="currentColor" width="800px" height="800px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3,22H21a1,1,0,0,0,1-1V6a1,1,0,0,0-1-1H17V3a1,1,0,0,0-2,0V5H9V3A1,1,0,0,0,7,3V5H3A1,1,0,0,0,2,6V21A1,1,0,0,0,3,22ZM4,7H20v3H4Zm0,5H20v8H4Z"/></svg>
+                    <p class="data-date">2024-11-14</p>
+                    <p class="data-time">08:45:10</p>
+                </div>
+                <div class="data-madeby">
+                    <svg class="madeby-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 21C5 17.134 8.13401 14 12 14C15.866 14 19 17.134 19 21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>    
+                    <p>admin</p>
+                </div>
+            </div>
+        </div>
+        <div class="data-element">
+            <div class="data-header">
+                <svg class="data-open-element" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z" fill="currentColor"/>
+                </svg>
+                <span class="data-type" data-type="DELETE">DELETE</span>
+                <span class="data-name">users</span>
+                <span class="data-space">•</span>
+                <span class="data-id">ID: 123</span>
+            </div>
+            <div class="data-details">
+                <span class="data-user">Kullanıcı: <span class="data-user-name">admin</span></span>
+                <span class="data-separator">→</span>
+                <span class="data-colmn">Kolon: <span class="data-colmn-name">name</span></span>
+            </div>
+            <div class="data-footer">
+                <div class="footer-timestamp">
+                    <svg class="footer-icon" fill="currentColor" width="800px" height="800px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3,22H21a1,1,0,0,0,1-1V6a1,1,0,0,0-1-1H17V3a1,1,0,0,0-2,0V5H9V3A1,1,0,0,0,7,3V5H3A1,1,0,0,0,2,6V21A1,1,0,0,0,3,22ZM4,7H20v3H4Zm0,5H20v8H4Z"/></svg>
+                    <p class="data-date">2024-11-14</p>
+                    <p class="data-time">08:45:10</p>
+                </div>
+                <div class="data-madeby">
+                    <svg class="madeby-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 21C5 17.134 8.13401 14 12 14C15.866 14 19 17.134 19 21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>    
+                    <p>admin</p>
+                </div>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
