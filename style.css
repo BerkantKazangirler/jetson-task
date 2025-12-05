@@ -149,6 +149,7 @@ body {
   flex-direction: column;
   justify-content: center;
   gap: 10px;
+  padding-bottom: 30px;
 }
 
 .data-element {
